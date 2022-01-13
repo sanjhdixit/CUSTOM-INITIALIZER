@@ -1,0 +1,19 @@
+ struct Distance {
+    var kilometer:Double
+    init(kilometer:Double) {
+        self.kilometer = kilometer
+    }
+    init(meter:Double) {
+        kilometer = (meter/1000)
+    }
+    init(centimeter:Double) {
+        kilometer = (centimeter/100000)
+    }
+}
+let totalDistance = Distance(kilometer:25000)
+let distanceInM = Distance(meter:2200)
+let distanceInCm = Distance(centimeter:500)
+
+print(totalDistance.kilometer)
+print(distanceInM.kilometer)
+print(distanceInCm.kilometer)
